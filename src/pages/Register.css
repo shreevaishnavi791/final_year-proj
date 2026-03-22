@@ -1,0 +1,321 @@
+.register-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8fafc;
+  padding: 2rem 1rem;
+}
+
+.register-container {
+  width: 100%;
+  max-width: 600px;
+  background: white;
+  padding: 3rem;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.register-title {
+  font-family: var(--font-family-serif);
+  font-size: 1.75rem;
+  color: #1e1b4b;
+  text-align: left;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.register-subtitle {
+  text-align: left;
+  color: #64748b;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.sample-data-btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  color: #2563eb;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 0.85rem;
+  cursor: pointer;
+  margin-bottom: 1.5rem;
+  transition: all 0.2s;
+}
+
+.sample-data-btn:hover {
+  background: #dbeafe;
+}
+
+.block-divider {
+  display: flex;
+  gap: 4px;
+  margin: 1.5rem 0;
+}
+
+.block-divider span {
+  width: 12px;
+  height: 6px;
+  background: #334155;
+  border-radius: 1px;
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #334155;
+  font-size: 0.9rem;
+}
+
+.side-by-side {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.three-cols {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.input-with-sub {
+  display: flex;
+  flex-direction: column;
+}
+
+.sub-label {
+  font-size: 0.9rem;
+  color: #94a3b8;
+  margin-top: 0.35rem;
+}
+
+input, select {
+  width: 100%;
+  padding: 0.65rem 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  transition: border-color 0.2s;
+  background-color: white;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: #4b0082;
+}
+
+.register-error {
+  background: #fef2f2;
+  color: #dc2626;
+  padding: 0.75rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+/* Button override for Register page specifically */
+.register-form button[type="submit"] {
+  width: 100% !important;
+  background: #1e1b4b !important;
+  color: white !important;
+  padding: 0.85rem !important;
+  border-radius: 50px !important;
+  font-weight: 700 !important;
+  font-size: 1rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  margin-top: 2rem !important;
+  border: none !important;
+  cursor: pointer !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.register-form button[type="submit"]:hover {
+  background: #2d2a5d !important;
+  transform: translateY(-1px);
+}
+
+.auth-toggle {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+.toggle-btn {
+  color: var(--color-accent);
+  font-weight: 700;
+  margin-left: 0.5rem;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.toggle-btn:hover {
+  color: var(--color-accent-dark);
+}
+
+.margin-bottom {
+  margin-bottom: 1rem;
+}
+
+/* OTP View Styles */
+.otp-view {
+  text-align: center;
+}
+
+.otp-icon {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+  color: #22c55e;
+}
+
+.otp-sending {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: #4b0082;
+  font-size: 0.9rem;
+  margin: 0.75rem 0;
+  padding: 0.6rem 1rem;
+  background: #f5f0ff;
+  border-radius: 6px;
+}
+
+.register-success {
+  background: #f0fdf4;
+  color: #16a34a;
+  padding: 0.75rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  font-size: 0.85rem;
+  border: 1px solid #bbf7d0;
+}
+
+.otp-container {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.main-otp-input {
+  font-size: 2rem;
+  text-align: center;
+  letter-spacing: 0.5rem;
+  font-weight: 800;
+  color: #1e1b4b;
+  margin: 2rem 0;
+}
+
+.otp-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.otp-resend-row {
+  display: flex;
+  justify-content: center;
+  margin: 0.25rem 0;
+}
+
+.resend-timer {
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+
+.resend-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: none;
+  border: none;
+  color: #4b0082;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.4rem 0.75rem;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.resend-btn:hover:not(:disabled) {
+  background: #f5f0ff;
+}
+
+.resend-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  color: #64748b;
+  font-size: 0.9rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+.back-btn:hover {
+  color: #1e1b4b;
+}
+
+/* Utility Classes */
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+.py-8 {
+  padding: 2rem 0;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.otp-success-msg {
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

@@ -1,0 +1,33 @@
+.testimonials-section {
+  padding: 36px 0;
+  background: linear-gradient(180deg, #fbfdff, #fff);
+}
+.testimonials-title {
+  font-size: 1.25rem;
+  margin-bottom: 14px;
+}
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+.testimonial-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 14px;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+}
+.quote {
+  font-style: italic;
+  color: #0f172a;
+  margin-bottom: 8px;
+}
+.author {
+  font-weight: 600;
+  color: #0f172a;
+}
+.role {
+  font-weight: 400;
+  color: #6b7280;
+  margin-left: 6px;
+}

@@ -1,0 +1,186 @@
+/* ═══════════════════════════════════════════════════
+   Footer — Amirthaa Wet Grinder Modern Design
+   Dark Blue Gradient Background
+   ═══════════════════════════════════════════════════ */
+
+.footer {
+  background: linear-gradient(135deg, #1565c0 0%, #1976d2 25%, #1a237e 75%, #0d47a1 100%);
+  color: #fff;
+  padding-top: 5rem;
+  font-family: var(--font-family-sans);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative top border */
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #1565c0, #c62828, #7b1fa2);
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding-bottom: 3rem;
+}
+
+@media (min-width: 1024px) {
+  .footer-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 4rem;
+  }
+}
+
+/* ── Brand Section ── */
+.footer-brand-section {
+  flex: 1.5;
+  max-width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .footer-brand-section {
+    max-width: 320px;
+  }
+}
+
+.footer-logo {
+  font-family: var(--font-family-serif);
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  color: white;
+  letter-spacing: 0.02em;
+}
+
+.footer-desc {
+  line-height: 1.7;
+  margin-bottom: 1.25rem;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.95rem;
+}
+
+.footer-email-link {
+  display: inline-block;
+  color: #bbdefb;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.footer-email-link:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+/* ── Links Grid ── */
+.footer-links-grid {
+  flex: 3;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .footer-links-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-heading {
+  font-family: var(--font-family-sans);
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: white;
+  position: relative;
+  display: inline-block;
+}
+
+.footer-links-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.footer-links-list a {
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  transition: all 0.25s ease;
+  font-size: 0.9rem;
+  display: inline-block;
+}
+
+.footer-links-list a:hover {
+  color: white;
+  transform: translateX(4px);
+}
+
+/* ── Footer Bottom ── */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 1.5rem 0;
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.footer-bottom-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .footer-bottom-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.footer-bottom p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.85rem;
+}
+
+/* ── Social Icons Bottom ── */
+.social-links-bottom {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.social-follow-text {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-right: 0.5rem;
+}
+
+.social-icon-btn {
+  color: rgba(255, 255, 255, 0.8);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-icon-btn:hover {
+  color: white;
+  transform: translateY(-3px) scale(1.1);
+}

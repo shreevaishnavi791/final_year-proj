@@ -1,0 +1,178 @@
+/* Splash Screen Styles */
+
+.splash-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 50%, var(--primary-dark) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  animation: splashFadeIn 0.5s ease-out;
+  overflow: hidden;
+}
+
+.splash-screen.fade-out {
+  animation: splashFadeOut 0.8s ease-out forwards;
+}
+
+@keyframes splashFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes splashFadeOut {
+  to {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+}
+
+.splash-content {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+/* Animated Logo */
+.splash-logo {
+  margin-bottom: 3rem;
+  animation: logoAppear 1s ease-out;
+}
+
+@keyframes logoAppear {
+  from {
+    opacity: 0;
+    transform: translateY(-30px) scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.logo-circle {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 2rem;
+  position: relative;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.logo-inner {
+  width: 100%;
+  height: 100%;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 20px 60px rgba(109, 40, 217, 0.4); /* Royal Purple Shadow */
+  position: relative;
+}
+
+.logo-text {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: var(--color-accent); /* Royal Purple Text */
+  font-family: var(--font-heading);
+}
+
+/* Brand Name */
+.brand-name {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 0.5rem;
+  font-family: var(--font-heading);
+  letter-spacing: 2px;
+}
+
+.brand-word {
+  display: inline-block;
+}
+
+.brand-tagline {
+  font-size: 1.1rem;
+  color: white;
+  opacity: 0.8;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* Loading Container */
+.loading-container {
+  margin-top: 3rem;
+}
+
+/* Loading Bar */
+.loading-bar {
+  width: 300px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  margin: 0 auto 2rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.loading-progress {
+  height: 100%;
+  background: white;
+  border-radius: 10px;
+  transition: width 0.3s ease;
+  box-shadow: 0 0 15px white;
+}
+
+/* Floating Particles */
+.particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  animation: float 4s ease-in-out infinite;
+}
+
+.particle:nth-child(1) { left: 10%; bottom: -10%; animation-delay: 0s; animation-duration: 5s; }
+.particle:nth-child(2) { left: 30%; bottom: -10%; animation-delay: 1s; animation-duration: 6s; }
+.particle:nth-child(3) { left: 50%; bottom: -10%; animation-delay: 0.5s; animation-duration: 4.5s; }
+.particle:nth-child(4) { left: 70%; bottom: -10%; animation-delay: 2s; animation-duration: 5.5s; }
+.particle:nth-child(5) { left: 85%; bottom: -10%; animation-delay: 1.5s; animation-duration: 6.5s; }
+.particle:nth-child(6) { left: 20%; bottom: -10%; animation-delay: 0.8s; animation-duration: 5.2s; }
+
+@keyframes float {
+  0% { transform: translateY(0) translateX(0); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% {
+    transform: translateY(-100vh) translateX(20px);
+    opacity: 0;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .brand-name { font-size: 2.5rem; }
+  .logo-circle { width: 100px; height: 100px; }
+  .logo-text { font-size: 2.5rem; }
+}
